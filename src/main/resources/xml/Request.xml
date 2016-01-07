@@ -1,0 +1,18 @@
+<Request>
+    <HeaderInfo UserID="77" RequestorId="Ctrip.com" AsyncRequest="false" TimeStamp="2012-8-6 3:54:24">
+        <Authentication UserName="zhilianjishuzhuanshu"
+                        Password="zhilianzhuanshu11!!"/>
+        <RequestType Name="GetCtripRoomTypeInfo" Version="1.0"/>
+    </HeaderInfo>
+    <!--获取房型对照信息请求-->
+    <HotelGroupInterfaceRoomTypeListRequest>
+        <!--酒店自己的酒店Code,里面内容仅是举例,非实际情况-->
+        <HotelGroupHotelCode>101</HotelGroupHotelCode>
+        <!--酒店自己的房型Code,里面内容仅是举例,非实际情况-->
+        <HotelGroupRoomTypeCode></HotelGroupRoomTypeCode>
+        <!--集团品牌-->
+        <HotelGroupBrand/>
+        <!--房价代码-->
+        <HotelGroupRatePlanCode/>
+    </HotelGroupInterfaceRoomTypeListRequest>
+</Request>

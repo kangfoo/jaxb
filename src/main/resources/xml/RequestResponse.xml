@@ -1,0 +1,44 @@
+<RequestResponse>
+    <RequestResult>
+        <!--返回描述-->
+        <Message>string</Message>
+        <!--返回代码-->
+        <ResultCode>int</ResultCode>
+        <Response>
+            <HeaderInfo ResultCode="Success"/>
+            <HotelGroupInterfaceRoomTypeListResponse>
+                <!--对照信息列表-->
+                <HotelGroupInterfaceRoomTypeList>
+                    <HotelGroupInterfaceRoomTypeEntity>
+                        <InterfaceRoomTypeID>1140506</InterfaceRoomTypeID>
+                        <!--Ctrip的房型ID-->
+                        <Room>2695759</Room>
+                        <!--房型名-->
+                        <RoomName>经济房</RoomName>
+                        <!--早餐数-->
+                        <Breakfast>0</Breakfast>
+                        <!--人数,非多人价时可为0-->
+                        <Person>2</Person>
+                        <!--Ctrip的酒店ID-->
+                        <Hotel>481692</Hotel>
+                        <!--酒店房型Code-->
+                        <HotelGroupRoomTypeCode>ZCP</HotelGroupRoomTypeCode>
+                        <!--酒店房型名-->
+                        <HotelGroupRoomName>经济房
+                        </HotelGroupRoomName>
+                        <!--酒店Code-->
+                        <HotelGroupHotelCode>1762</HotelGroupHotelCode>
+                        <!--酒店集团品牌-->
+                        <HotelGroupBrand/>
+                        <!--酒店房价计划Code-->
+                        <HotelGroupRatePlanCode/>
+                        <!--酒店预订Code-->
+                        <HotelGroupBookingCode/>
+                        <!--酒店ChainCode-->
+                        <HotelGroupChainCode/>
+                    </HotelGroupInterfaceRoomTypeEntity>
+                </HotelGroupInterfaceRoomTypeList>
+            </HotelGroupInterfaceRoomTypeListResponse>
+        </Response>
+    </RequestResult>
+</RequestResponse>

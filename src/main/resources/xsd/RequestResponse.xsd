@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://study.wangjie.kangfoo.com/response" targetNamespace="http://study.wangjie.kangfoo.com/response"  attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RequestResponse" type="RequestResponseType"/>
+  <xs:complexType name="RequestResponseType">
+    <xs:sequence>
+      <xs:element type="RequestResultType" name="RequestResult"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HotelGroupInterfaceRoomTypeListType">
+    <xs:sequence>
+      <xs:element type="HotelGroupInterfaceRoomTypeEntityType" name="HotelGroupInterfaceRoomTypeEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestResultType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Message">
+        <xs:annotation>
+          <xs:documentation>返回描述</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:int" name="ResultCode">
+        <xs:annotation>
+          <xs:documentation>返回代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="ResponseType" name="Response"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseType">
+    <xs:sequence>
+      <xs:element type="HeaderInfoType" name="HeaderInfo"/>
+      <xs:element type="HotelGroupInterfaceRoomTypeListResponseType" name="HotelGroupInterfaceRoomTypeListResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HotelGroupInterfaceRoomTypeListResponseType">
+    <xs:sequence>
+      <xs:element type="HotelGroupInterfaceRoomTypeListType" name="HotelGroupInterfaceRoomTypeList">
+        <xs:annotation>
+          <xs:documentation>对照信息列表</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HotelGroupInterfaceRoomTypeEntityType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="InterfaceRoomTypeID"/>
+      <xs:element type="xs:string" name="Room">
+        <xs:annotation>
+          <xs:documentation>Ctrip的房型ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="RoomName">
+        <xs:annotation>
+          <xs:documentation>房型名</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="Breakfast">
+        <xs:annotation>
+          <xs:documentation>早餐数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="Person">
+        <xs:annotation>
+          <xs:documentation>人数,非多人价时可为0</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="Hotel">
+        <xs:annotation>
+          <xs:documentation>Ctrip的酒店ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupRoomTypeCode">
+        <xs:annotation>
+          <xs:documentation>酒店房型Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupRoomName">
+        <xs:annotation>
+          <xs:documentation>酒店房型名</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupHotelCode">
+        <xs:annotation>
+          <xs:documentation>酒店Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupBrand">
+        <xs:annotation>
+          <xs:documentation>酒店集团品牌</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupRatePlanCode">
+        <xs:annotation>
+          <xs:documentation>酒店房价计划Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupBookingCode">
+        <xs:annotation>
+          <xs:documentation>酒店预订Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="HotelGroupChainCode">
+        <xs:annotation>
+          <xs:documentation>酒店ChainCode</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HeaderInfoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="ResultCode"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
